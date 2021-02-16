@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="WatermarkView">
+        <attr name="watermark_text" format="string|reference" />
+        <attr name="watermark_textSize" format="dimension|reference" />
+        <attr name="watermark_textColor" format="color|reference" />
+        <attr name="watermark_degrees" format="float|reference" />
+        <attr name="watermark_marginLeft" format="dimension|reference" />
+        <attr name="watermark_marginTop" format="dimension|reference" />
+        <attr name="watermark_marginRight" format="dimension|reference" />
+        <attr name="watermark_marginBottom" format="dimension|reference" />
+    </declare-styleable>
+
+</resources>

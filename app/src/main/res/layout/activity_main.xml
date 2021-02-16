@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <com.yunxian.android.watermark.WatermarkView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:watermark_degrees="30"
+        app:watermark_marginBottom="14dp"
+        app:watermark_marginLeft="4dp"
+        app:watermark_marginRight="20dp"
+        app:watermark_marginTop="7dp"
+        app:watermark_text="123     678"
+        app:watermark_textColor="#f00"
+        app:watermark_textSize="12dp" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
