@@ -144,7 +144,11 @@ public class WatermarkDrawable extends Drawable {
             return;
         }
         paint.setShader(markerShader);
-        canvas.drawRect(canvas.getClipBounds(), paint);
+        Rect rect = getBounds();
+        if (rect.width() <= 0 || rect.height() <= 0) {
+            rect = canvas.getClipBounds();
+        }
+        canvas.drawRect(rect, paint);
     }
 
     @Override
