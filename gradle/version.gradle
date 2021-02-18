@@ -1,0 +1,21 @@
+// 基础值定义
+
+ext {
+
+    annotation = '1.1.0'
+    appcompat = '1.1.0'
+    material = '1.1.0'
+
+}
+
+ExtraPropertiesExtension extension = project.extensions.extraProperties
+Properties properties = new Properties()
+File file = project.rootProject.file('local.properties')
+if (file.exists()) {
+    properties.load(file.newDataInputStream())
+    for (String key : properties.keys()) {
+        if (extension.has(key)) {
+            extension.set(key, properties.getProperty(key))
+        }
+    }
+}
