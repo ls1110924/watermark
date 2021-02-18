@@ -145,7 +145,7 @@ public class WatermarkDrawable extends Drawable {
         }
         paint.setShader(markerShader);
         Rect rect = getBounds();
-        if (rect.width() <= 0 || rect.height() <= 0) {
+        if (rect.isEmpty()) {
             rect = canvas.getClipBounds();
         }
         canvas.drawRect(rect, paint);
@@ -186,6 +186,7 @@ public class WatermarkDrawable extends Drawable {
             return;
         }
         Rect textBounds = new Rect();
+        assert text != null;
         paint.getTextBounds(text, 0, text.length(), textBounds);
 
         Matrix matrix = new Matrix();
